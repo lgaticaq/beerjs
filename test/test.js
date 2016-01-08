@@ -26,7 +26,7 @@ describe('beerjs', () => {
     });
 
     it('should return a valid result (callback)', (done) => {
-      lib((err, data) => {
+      lib.getInfo((err, data) => {
         expect(err).to.be.null;
         expect(data).to.be.a('object');
         expect(data.evento).to.be.a('string');
@@ -42,7 +42,7 @@ describe('beerjs', () => {
 
 
     it('should return a valid result (promise)', (done) => {
-      lib().then((data) => {
+      lib.getInfo().then((data) => {
         expect(data).to.be.a('object');
         expect(data.evento).to.be.a('string');
         expect(data.fecha).to.be.a('string');
@@ -69,7 +69,7 @@ describe('beerjs', () => {
     });
 
     it('should return a empty result (callback)', (done) => {
-      lib((err, result) => {
+      lib.getInfo((err, result) => {
         expect(err).to.eql(new Error('Not found'));
         expect(result).to.be.undefined;
         done();
@@ -77,7 +77,7 @@ describe('beerjs', () => {
     });
 
     it('should return a empty result (promise)', (done) => {
-      lib().then((result) => {
+      lib.getInfo().then((result) => {
         expect(result).to.be.undefined;
         done();
       }).fail((err) => {
