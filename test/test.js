@@ -7,9 +7,7 @@ import lib from '../lib';
 
 describe('beerjs', () => {
 
-
   describe('valid', () => {
-
     beforeEach(() => {
       nock.disableNetConnect();
       nock('https://raw.githubusercontent.com')
@@ -25,23 +23,7 @@ describe('beerjs', () => {
         });
     });
 
-    it('should return a valid result (callback)', (done) => {
-      lib.getInfo((err, data) => {
-        expect(err).to.be.null;
-        expect(data).to.be.a('object');
-        expect(data.evento).to.be.a('string');
-        expect(data.fecha).to.be.a('string');
-        expect(data.donde).to.be.a('string');
-        expect(data.direccion).to.be.a('string');
-        expect(data.hora).to.be.a('string');
-        expect(data.tema).to.be.a('string');
-        expect(data.requisito).to.be.a('string');
-        done();
-      });
-    });
-
-
-    it('should return a valid result (promise)', (done) => {
+    it('should return a valid result', done => {
       lib.getInfo().then((data) => {
         expect(data).to.be.a('object');
         expect(data.evento).to.be.a('string');
@@ -52,8 +34,8 @@ describe('beerjs', () => {
         expect(data.tema).to.be.a('string');
         expect(data.requisito).to.be.a('string');
         done();
-      }).fail((err) => {
-        expect(err).to.be.null;
+      }).catch(err => {
+        if (err) throw err;
         done();
       });
     });
@@ -68,19 +50,8 @@ describe('beerjs', () => {
         .reply(200, {});
     });
 
-    it('should return a empty result (callback)', (done) => {
-      lib.getInfo((err, result) => {
-        expect(err).to.eql(new Error('Not found'));
-        expect(result).to.be.undefined;
-        done();
-      });
-    });
-
-    it('should return a empty result (promise)', (done) => {
-      lib.getInfo().then((result) => {
-        expect(result).to.be.undefined;
-        done();
-      }).fail((err) => {
+    it('should return a empty result', done => {
+      lib.getInfo().catch(err => {
         expect(err).to.eql(new Error('Not found'));
         done();
       });
