@@ -1,27 +1,19 @@
 'use strict';
 
-import Q from 'q';
 import rp from 'request-promise';
 
-const getInfo = (cb) => {
-  const deferred = Q.defer();
+const getInfo = () => {
   const options = {
     url: 'https://raw.githubusercontent.com/beerjs/santiago/master/beerjs.json',
     json: true
   };
-  rp(options).then(data => {
-    if (data.evento && data.fecha) {
-      deferred.resolve(data);
-    } else {
-      deferred.reject(new Error('Not found'));
-    }
-  }).catch(deferred.reject);
-  deferred.promise.nodeify(cb);
-  return deferred.promise;
+  return rp(options).then(data => {
+    if (!data.evento || !data.fecha) throw new Error('Not found');
+    return data;
+  });
 };
 
-const getEvents = (cb) => {
-  const deferred = Q.defer();
+const getEvents = () => {
   const options = {
     url: 'https://api.github.com/repos/beerjs/santiago/issues',
     json: true,
@@ -29,9 +21,9 @@ const getEvents = (cb) => {
       'User-Agent': 'beerjs-info'
     }
   };
-  rp(options).then(data => {
-    const editions = data.filter(x => /Edición/i.test(x.title))
-      .map(x => {
+  return rp(options).then(data => data.filter(x => /Edición/i.test(x.title)))
+    .then(data => {
+      return data.map(x => {
         const [date, place, theme, expositors] = x.body.split('\r\n');
         return {
           title: x.title,
@@ -42,10 +34,7 @@ const getEvents = (cb) => {
           expositors: expositors.split(': ')[1]
         };
       });
-    deferred.resolve(editions);
-  }).catch(deferred.reject);
-  deferred.promise.nodeify(cb);
-  return deferred.promise;
+    });
 };
 
 module.exports = {
