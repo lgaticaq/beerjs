@@ -19,18 +19,9 @@ npm i -S beerjs-info
 
 [Try on Tonic](https://tonicdev.com/npm/beerjs-info)
 ```js
-const beerjs = require('beerjs-info');
+import {getInfo} from 'beerjs-info';
 
-// Promise
-beerjs()
-  .then(data => console.log(data))
-  .catch(err => console.error(err));
-
-// Callback
-beerjs(data, (err, data) => {
-  if (err) return console.error(err);
-  console.log(data);
-});
+getInfo().then(console.log);
 ```
 
 Result:

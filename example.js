@@ -1,3 +1,3 @@
 const beerjs = require('beerjs-info');
 
-const result = await beerjs(data)
+const result = await beerjs.getInfo();
