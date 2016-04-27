@@ -30,6 +30,7 @@
   },
   "homepage": "https://github.com/lgaticaq/beerjs#readme",
   "dependencies": {
+    "cheerio": "^0.20.0",
     "request-promise": "^3.0.0"
   },
   "devDependencies": {
