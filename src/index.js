@@ -1,6 +1,7 @@
 'use strict';
 
 import rp from 'request-promise';
+import cheerio from 'cheerio';
 
 const getInfo = () => {
   const options = {
@@ -37,7 +38,21 @@ const getEvents = () => {
     });
 };
 
+const getRegister = () => {
+  const options = {
+    url: 'http://www.beerjs.cl/',
+    transform: cheerio.load
+  };
+  return rp(options).then($ => {
+    let link = null;
+    const a = $('.button-register');
+    if (a) link = a.attr('href');
+    return link;
+  });
+};
+
 module.exports = {
   getInfo: getInfo,
-  getEvents: getEvents
+  getEvents: getEvents,
+  getRegister: getRegister
 };
