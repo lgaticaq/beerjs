@@ -25,14 +25,14 @@ const getEvents = () => {
   return rp(options).then(data => data.filter(x => /Edición/i.test(x.title)))
     .then(data => {
       return data.map(x => {
-        const [date, place, theme, expositors] = x.body.split('\r\n');
+        const body = x.body.split('\r\n');
         return {
           title: x.title,
           comments_url: x.comments_url,
-          date: date.split(': ')[1],
-          place: place.split(': ')[1],
-          theme: theme.split(': ')[1],
-          expositors: expositors.split(': ')[1]
+          date: body[0].split(': ')[1],
+          place: body[1].split(': ')[1],
+          theme: body[2].split(': ')[1],
+          expositors: body[3].split(': ')[1]
         };
       });
     });
