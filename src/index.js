@@ -1,7 +1,7 @@
 'use strict';
 
-import rp from 'request-promise';
-import cheerio from 'cheerio';
+const rp = require('request-promise');
+const cheerio = require('cheerio');
 
 const getInfo = () => {
   const options = {

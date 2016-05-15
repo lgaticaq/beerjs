@@ -1,11 +1,11 @@
 'use strict';
 
-import path from 'path';
+const path = require('path');
 
-import {expect} from 'chai';
-import nock from 'nock';
+const expect = require('chai').expect;
+const nock = require('nock');
 
-import lib from '../lib';
+const lib = require('../src');
 
 describe('beerjs', () => {
 
