@@ -1,0 +1,21 @@
+{
+  "name": "beerjs-info",
+  "description": "Get beerjs info (Chile)",
+  "main": "src",
+  "authors": [
+    "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "beerjs",
+    "chile"
+  ],
+  "homepage": "https://github.com/lgaticaq/beerjs",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
