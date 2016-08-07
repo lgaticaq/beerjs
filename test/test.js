@@ -1,7 +1,5 @@
 'use strict';
 
-const path = require('path');
-
 const expect = require('chai').expect;
 const nock = require('nock');
 
@@ -55,25 +53,6 @@ describe('beerjs', () => {
     it('should return a empty result', done => {
       lib.getInfo().catch(err => {
         expect(err).to.eql(new Error('Not found'));
-        done();
-      });
-    });
-  });
-
-  describe('register', () => {
-    beforeEach(() => {
-      nock.disableNetConnect();
-      nock('http://www.beerjs.cl')
-        .get('/')
-        .replyWithFile(200, path.join(__dirname, 'beerjs.html'));
-    });
-
-    it('should return a valid result', done => {
-      lib.getRegister().then((data) => {
-        expect(data).to.eql('https://guestlistapp.com/events/416937');
-        done();
-      }).catch(err => {
-        if (err) throw err;
         done();
       });
     });
