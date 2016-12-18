@@ -1,3 +1,34 @@
+#### 2.1.1 (2016-12-17)
+
+##### Chores
+
+* **package:**
+  * Add yarn.lock ([30cfbe67](https://github.com/lgaticaq/beerjs/commit/30cfbe6774da5a6ee859220dc635dc7767d24553))
+  * Update dependencies ([2be00889](https://github.com/lgaticaq/beerjs/commit/2be00889efe8b9e12080c81e78d8361fae8c7819))
+  * update eslint to version 3.12.1 ([5e3bab97](https://github.com/lgaticaq/beerjs/commit/5e3bab972d72e344a31daba5df31c3b3b008a588))
+  * update eslint to version 3.12.0 ([7aa10433](https://github.com/lgaticaq/beerjs/commit/7aa104331055763604e721333fb89503fc15fceb))
+  * update eslint to version 3.11.1 ([ace93633](https://github.com/lgaticaq/beerjs/commit/ace93633c61b366fe85ed46e1cc0377a69aa398d))
+  * update eslint to version 3.10.2 ([f06668e0](https://github.com/lgaticaq/beerjs/commit/f06668e053bf41b52a11a536907d25d2971cec0c))
+  * update eslint to version 3.10.1 ([f7cd5329](https://github.com/lgaticaq/beerjs/commit/f7cd5329783684532ec66ad8c6a0258363e04dd7))
+  * update eslint to version 3.10.0 ([b4bf9f5c](https://github.com/lgaticaq/beerjs/commit/b4bf9f5c0c3b01a025db92a4af022c919b549218))
+  * update dependencies ([b3bf041b](https://github.com/lgaticaq/beerjs/commit/b3bf041b247210f93a2c5d71614f9b8fc81762a8))
+  * update eslint to version 3.9.0 ([020b657f](https://github.com/lgaticaq/beerjs/commit/020b657fe97c7f9ce632c26fac229639149866df))
+  * update nock to version 9.0.2 ([c9f3c492](https://github.com/lgaticaq/beerjs/commit/c9f3c492d0f2b24e1cfd02ac7a71b5ea46b2a762))
+  * update nock to version 9.0.0 ([c086b91a](https://github.com/lgaticaq/beerjs/commit/c086b91aeecd527a4b80051b9ae2ad9c6eb81210))
+  * update eslint to version 3.8.1 ([f8d79fd2](https://github.com/lgaticaq/beerjs/commit/f8d79fd2da7b8c2c4075cb368ade6b9033049787))
+  * update eslint to version 3.7.1 ([5beef28d](https://github.com/lgaticaq/beerjs/commit/5beef28df42c6f8ff956c126e338035d90ca7ce3))
+  * update codeclimate-test-reporter to version 0.4.0 ([dce76179](https://github.com/lgaticaq/beerjs/commit/dce76179f050419f8bbc52bb6075257189dead0a))
+  * update eslint to version 3.7.0 ([97bc336a](https://github.com/lgaticaq/beerjs/commit/97bc336a7e7e9da98c810f3e9bf06f8b62dd6460))
+  * update eslint to version 3.6.1 ([497dbad0](https://github.com/lgaticaq/beerjs/commit/497dbad0b1ab89dffb144c053f0faa06677cce00))
+  * update eslint to version 3.6.0 ([94bee4f5](https://github.com/lgaticaq/beerjs/commit/94bee4f571ccfbd5369e9693e728dc195d549bb8))
+  * update eslint to version 3.5.0 ([c1e892cf](https://github.com/lgaticaq/beerjs/commit/c1e892cff467c851d639dc567e46c73c7b6f7d56))
+  * update eslint to version 3.4.0 ([844af443](https://github.com/lgaticaq/beerjs/commit/844af44367d0dd54fa63e84b359fb30a23ebc8ce))
+  * update eslint to version 3.3.1 ([3892f690](https://github.com/lgaticaq/beerjs/commit/3892f6902b280951ffde061de530dcbba44dba2d))
+  * update eslint to version 3.3.0 ([e2a4a115](https://github.com/lgaticaq/beerjs/commit/e2a4a115338842726d32d8538f554aaee87f44b9))
+* **travis:** Update node version ([44976566](https://github.com/lgaticaq/beerjs/commit/44976566749034e4605451abeadcebde687d8a1f))
+* **nvm:** Update node version ([317c09f0](https://github.com/lgaticaq/beerjs/commit/317c09f028c6134e5a5dab1c6ecbebec2129dbf8))
+* **npm:** Update ignore ([2bf7a5d7](https://github.com/lgaticaq/beerjs/commit/2bf7a5d73a63d94baedb1171c13e5c96dbe8205d))
+
 ### 2.1.0 (2016-8-7)
 
 ##### Chores
