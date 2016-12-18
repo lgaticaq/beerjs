@@ -28,7 +28,7 @@
     return fetch(url, options).then(res => res.json()).then(data => data.filter(x => /Edici.n/i.test(x.title)))
       .then(data => {
         return data.map(x => {
-          const body = x.body.split('\r\n');
+          const body = x.body.split(/\r\n|\n/);
           return {
             title: x.title,
             comments_url: x.comments_url,
