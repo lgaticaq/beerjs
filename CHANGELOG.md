@@ -1,3 +1,9 @@
+#### 2.1.2 (2016-12-18)
+
+##### Bug Fixes
+
+* **getEvents:** Fix split body ([f8ab7b4c](https://github.com/lgaticaq/beerjs/commit/f8ab7b4c53b4f5feed5064ab78326bef4e50b563))
+
 #### 2.1.1 (2016-12-17)
 
 ##### Chores
