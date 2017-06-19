@@ -9,4 +9,3 @@ test
 .travis.yml
 CHANGELOG.md
 bower.json
-yarn.lock
