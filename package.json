@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/lgaticaq/beerjs#readme",
   "dependencies": {
-    "node-fetch": "^1.7.1"
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "chai": "4.3.4",
