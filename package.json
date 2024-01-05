@@ -34,7 +34,7 @@
     "node-fetch": "^1.7.1"
   },
   "devDependencies": {
-    "chai": "4.3.4",
+    "chai": "4.4.0",
     "eslint": "5.16.0",
     "eslint-config-standard": "11.0.0",
     "eslint-plugin-import": "2.25.4",
